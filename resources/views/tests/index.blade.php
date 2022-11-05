@@ -3,7 +3,6 @@
 @section('content')
 
 <!-- 会員一覧表示 -->
-@if (count($tests) > 0)
 <div class="panel panel-default">
     <p style="text-align:right"><a href="{{ route('tests.create') }}"> 登録〉〉〉</a></p>
 
@@ -17,7 +16,7 @@
                 <th>メールアドレス</th>
                 <th>&nbsp;</th>
             </thead>
-            
+@if (count($tests) > 0)
             <!-- テーブル本体 -->
             <tbody>
                 @foreach ($tests as $test)
